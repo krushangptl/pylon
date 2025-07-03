@@ -4,4 +4,4 @@ I am going to learn Python again (yah! again because I lear about basic things o
 
 ## Resources to learn
 
-- https://www.geeksforgeeks.org/python/
+- https://www.geeksforgeeks.org/python/python-programming-language-tutorial/
