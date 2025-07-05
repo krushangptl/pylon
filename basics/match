@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+n = 2
+
+match n:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case _:
+        print("Other number")

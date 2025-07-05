@@ -1,0 +1,63 @@
+#!/usr/bin/python3
+
+# let's get user input
+
+name = input("Enter you name: ") # input function take input as string and return as string
+print(f"Hello {name}!")
+
+# nultiple input in single input function, split() to split at white space 
+x, y = input("Enter any 2 number: ").split()
+print("Value of x is {} and y is {}".format(x, y))
+
+# integer input by type conversion 
+
+age = int(input("Enter your age: "))
+
+if age < 0:
+    print("Please Enter valid age: ")
+elif age < 18:
+    print("You are Minor")
+elif age >= 18 and age <= 65:
+    print("You are Adult")
+else:
+    print("You are senior citizen")
+
+# note: in type casting we can use int(), float() and str() to convert data as we needed
+
+print(type(name))
+print(type(x))
+print(type(y))
+print(type(age))
+
+# list as input
+
+list_exp = input("Enter list element with whitespace: ").split()
+print(list_exp)
+
+# using loop 
+
+loop_list = []
+
+element = int(input("Enter number of element in list: "))
+
+for i in range(element):
+    val = input(f"Enter the value of {i+1} element: ")
+    loop_list.append(val)
+
+print(loop_list)
+
+# using map()
+
+map_list = list(map(int, input("Enter number separated by space: ").split()))
+
+print(map_list)
+
+# comprehension for concise input 
+
+no_ele = int(input("Enter number of element for concise list: "))
+
+con_list = [input(f"Enter element {i+1}: ") for i in range(no_ele)]
+
+print(con_list)
+
+# nested list is advance concept learn as need

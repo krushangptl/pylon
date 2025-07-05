@@ -1,0 +1,46 @@
+#!/usr/bin/python3
+
+cnt = 0
+while cnt < 3:
+    print("Hello Python")
+    cnt += 1
+else:
+    print("No Loop")
+
+dict_exp = {1: "Hello", 2: "Python", 3: "Language"}
+
+for key in dict_exp:
+    print(key, dict_exp[key])
+
+str_exp = "HelloPythonLanguage"
+for latter in str_exp:
+    print(latter, end=" ")
+
+print()
+
+list_exp = [1, 2, 3, 4]
+
+for i in range(len(list_exp)):
+    print(list_exp[i], end=" ")
+
+print()
+
+# pass 
+
+latter = ''
+
+for latter in str_exp:
+    pass
+print(latter)
+
+# iterator
+
+fruit = ["apple", "banana", "kiwi"]
+
+iter_obj = iter(fruit)
+while True:
+    try:
+        fruit = next(iter_obj)
+        print(fruit)
+    except StopIteration:
+        break

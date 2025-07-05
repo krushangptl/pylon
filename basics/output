@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+# output formatting 
+
+float_no = 150.75
+print(float_no)
+print("Float Number: {:.2f}".format(float_no))
+print("Float Number: {:.1f}".format(float_no)) # roundoff value 150.8
+print("Float Number: {:.4f}".format(float_no))
+
+# use of end and sep 
+
+date = 12 
+month = 8
+year = 2004
+
+print(date, month, year, sep="-")
+
+for i in range(11):
+    print(i, end=" ! ")
+
+print()
+
+num = int(input("Enter Number: "))
+sum = num + 5
+print("The sum is %d" %sum)

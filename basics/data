@@ -1,0 +1,67 @@
+#!/usr/bin/python3
+
+# complex number 
+complex_num = 3 + 12j
+print(type(complex_num))
+print(complex_num)
+
+# Numeric: integer, floating point, complex 
+
+# Sequence Type: string, list tuple
+
+# Mapping Type: dict
+
+# Boolean: bool 
+
+# Set Type: set, frozenset
+
+# Binary Tyep: bytes, bytearray, memoryview
+
+# tuple, list that is immutable 
+
+empt_tup = ()
+print(empt_tup)
+
+single_tup = ("Krushang",)
+print(single_tup)
+
+original = (1 << 4, 1 << 8, 1 << 16, "Hello!")
+
+for i in original:
+    print(i)
+
+# set, is collection of unorderd data that is mutable, iterable and has no duplicate element
+
+set_love = set() # empty set 
+
+set_love = set("KrushangLovePython")
+print("Set using string: ", set_love) 
+
+set_list = set(["Krushang", "Love", "Python"])
+print("Set using list: ", set_list)
+
+# set with loop and in 
+for i in set_list:
+    print(i, end=" ")
+
+print()
+
+print("Krushang" in set_list)
+
+# dictionary, kind of key and value pair (HASH TABLE CONCEPT NEED TO UNDERSTAND)
+
+# keys are immutable it can not be change but value can be anything
+
+dict_exp = {
+    1: "Krushang",
+    2: "Patel",
+    3: "VIM BTW!"
+}
+
+print(dict_exp)
+
+dict_dict = dict({1: 12, 2: 24, 3: 34})
+print(dict_dict)
+
+print(dict_exp[2])
+print(dict_exp.get(3))

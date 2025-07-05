@@ -1,0 +1,18 @@
+NOTES
+
+Variable 
+
+- In the global scope of variable at some point we done using some variable value and we don't 
+need it anymore but as it is global variable it stay in memory utile the program executes.
+To save memory we can delete that variable using `del`
+
+`
+x = 10
+
+print(x)
+
+del x
+
+`
+
+We can do it in local scope based on condition and situation
