@@ -1,0 +1,85 @@
+#!/usr/bin/python3
+
+# data type and return type 
+def even_odd(n: int) -> str:
+    """Function to check if the number is even or odd"""
+    return "Even" if n % 2 == 0 else "Odd"
+
+def default_arg(x, y = 24):
+    return x + y
+
+# keyword arg
+def key_arg(fname, lname):
+    print(fname, lname)
+
+# position of the arg matters 
+
+# arbitrary keyword arg: *args and **kwargs
+def func_arg(*argv):
+    for arg in argv:
+        print(arg)
+
+# kwargs for key value pair 
+def func_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print("%s = %s" %(key, value))
+
+# docstring: go to even_odd() function again
+
+# function inside the function or nested function possible in python to protect from happening out side of function
+
+# anonymouse function, function with no names: lambda function
+
+cube = lambda x: x*x*x
+
+# simple recuresion
+def factorial(n: int) -> int:
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# NOTE: in Python every variable name is reference
+
+def no_ref(x):
+    x[0] = 20
+
+def yes_ref(x):
+    x = [10, 20, 30]
+
+def again_ref(x):
+    x = 1 << 4
+
+def main():
+    print("This is Main function running ...")
+
+    # function call
+    print(even_odd(12))
+    print(default_arg(12))
+    key_arg(fname="Krushang", lname="Patel")
+
+    func_arg("Hello", "Krushang", "!", "Python", "Language")
+
+    func_kwargs(first="Krushang", mid="D", last="Patel")
+    
+    print(even_odd.__doc__)
+
+    print(cube(7))
+
+    print(f"Factorial of 5 is {factorial(5)}")
+
+    lst = [10, 20, 30, 40, 50]
+    print(lst)
+    no_ref(lst)
+    print(lst)
+
+    yes_ref(lst)
+    print(lst)
+
+    x = 1 << 8
+    print(x)
+    again_ref(x)
+    print(x)
+
+if __name__ == "__main__":
+    main()
