@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+
+# global variable: declare outside of function block
+# local variable: declare indise of function block
+
+# global variable's lifetime is up to the program executes
+# local variable's lifetime is up to the function execution
+
+def change():
+    global str_
+    str_ += " Pylon"
+    print(str_)
+
+a:int = 1 << 16
+
+def f():
+    print("f() a: ", a)
+
+def g():
+    a:int = 1 << 4
+    print("g() a: ", a)
+
+def h():
+    global a
+    a = 1 << 12
+    print("h() a: ", a)
+
+str_ = "Krushang"
+print(str_)
+change()
+
+print("Global a: ", a)
+f()
+print("Global a: ", a)
+g()
+print("Global a: ", a)
+h()
+print("Global a: ", a)
